@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bharat.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      var x = 1;
+
+      //Do while loop code
+      document.write("Do while loop <br />");
+      do {
+        document.write(x + "<br />");
+        x++;
+      } while (x <= 10);
+
+      // Do for loop code
+      document.write("<br /> For loop <br />");
+
+      for (x = 1; x <= 10; x++) {
+        document.write(x + "<br />");
+      }
+
+      // while loop code
+      document.write("<br /> while loop <br />");
+      var y = 1;
+      while (y <= 10) {
+        document.write(y + "<br />");
+        y++;
+      }
+
+      //ternary operator
+      var a = prompt("Enter a value.");
+
+      document.writeln(
+        a <= 5
+          ? "<br />a is less than or equal to 5"
+          : "<br />a is greater than 5"
+      );
+    </script>
+  </body>
+</html>
