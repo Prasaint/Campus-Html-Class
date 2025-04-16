@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events Example</title>
+</head>
+<body>
+    <h1>HTML Events Example</h1>
+
+    <!-- Click Event -->
+    <button onclick="displayMessage()">Click Me</button>
+    <p id="message"></p>
+
+    <!-- Mouseover Event -->
+    <p onmouseover="changeText(this)">Hover over this text</p>
+
+    <!-- Focus and Blur Events -->
+    <input type="text" onfocus="focusEvent(this)" onblur="blurEvent(this)" placeholder="Focus on me">
+
+    <!-- Keydown Event -->
+    <input type="text" onkeydown="keyDownEvent(event)" placeholder="Type something">
+    <p id="keyMessage"></p>
+
+    <!-- Change Event -->
+    <select onchange="changeEvent(this)">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectedOption"></p>
+
+    <script>
+        function displayMessage() {
+            document.getElementById("message").innerText = "Button was clicked!";
+        }
+
+        function changeText(element) {
+            element.innerText = "You hovered over this text!";
+        }
+
+        function focusEvent(element) {
+            element.style.backgroundColor = "yellow";
+        }
+
+        function blurEvent(element) {
+            element.style.backgroundColor = "";
+        }
+
+        function keyDownEvent(event) {
+            document.getElementById("keyMessage").innerText = `You pressed: ${event.key}`;
+        }
+
+        function changeEvent(element) {
+            document.getElementById("selectedOption").innerText = `You selected: ${element.value}`;
+        }
+    </script>
+</body>
+</html>
