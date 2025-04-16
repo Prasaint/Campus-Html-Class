@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio, Video, and Canvas Example</title>
+  </head>
+  <body>
+    <h1>HTML Audio, Video, and Canvas Example</h1>
+
+    <!-- Audio Example -->
+    <h2>Audio</h2>
+    <audio controls preload="auto" style="width: 300px">
+      <source src="audio-example.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video Example -->
+    <h2>Video</h2>
+    <video controls width="600">
+      <source src="video-example.mp4" type="video/mp4" />
+      Your browser does not support the video element.
+    </video>
+
+    <!-- Canvas Example -->
+    <h2>Canvas</h2>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="400"
+      style="border: 1px solid #000"
+    ></canvas>
+
+    <script>
+      // Drawing on the canvas
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      const ctx2 = canvas.getContext("2d");
+
+      // Draw a rectangle
+
+      ctx.fillStyle = "blue";
+      ctx.fillRect(50, 50, 200, 100);
+
+      // Draw a circle
+      ctx.beginPath();
+      ctx.arc(300, 200, 50, 0, Math.PI * 2);
+      ctx.fillStyle = "red";      ctx.fill();
+
+      ctx.closePath();
+
+      // Draw text
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "green";
+      ctx.fillText("Hello Canvas!", 400, 50);
+    </script>
+  </body>
+</html>
